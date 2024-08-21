@@ -1,15 +1,27 @@
+import java.util.Scanner;
 
 class HelloWorld 
 {
     public static void main(String[] args) 
     {
+        Scanner s = new Scanner(System.in);
         
-        Person p = new Person("Gowtham",20);
-        p.setAge(21);
+        Person[] p = new Person[5];
         
-        System.out.println(p.getName());
-        System.out.println(p.getAge());
+        for(int i = 0;i < 5;i++)
+        {
+            System.out.print("Your Good Name ");
+            String name = s.nextLine();
+            System.out.print("Your Age ");
+            int age = s.nextInt();
+            p[i] = new Person(name,age);
+            s.nextLine();
+        }
         
+        for(int i = 0;i < 5;i++){
+            System.out.println("Name : "+p[i].getName());
+            System.out.println("Age : "+p[i].getAge());
+        }
     }
 }
 
@@ -24,7 +36,6 @@ class Person {
         }
         else {
             System.out.println("Invalid Age");
-            age = 0;
         }
     }
     
