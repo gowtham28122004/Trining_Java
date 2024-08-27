@@ -9,30 +9,18 @@ class SampleTrainProgram {
         if(a > 0 && a < 73){
             switch(a%8) {
                 case 1:
-                    System.out.println("Upper Berth");
-                    System.out.println("Seat no : "+a);
-                    System.out.println("Coach no : "+(int)a/8);
-                    break;
-                case 2:
-                    System.out.println("Middle Berth");
-                    System.out.println("Seat no : "+a);
-                    System.out.println("Coach no : "+(int)a/8);
-                    break;
-                case 3:
-                    System.out.println("Lower Berth");
-                    System.out.println("Seat no : "+a);
-                    System.out.println("Coach no : "+(int)a/8);
-                    break;
                 case 4:
                     System.out.println("Upper Berth");
                     System.out.println("Seat no : "+a);
                     System.out.println("Coach no : "+(int)a/8);
                     break;
+                case 2:
                 case 5:
                     System.out.println("Middle Berth");
                     System.out.println("Seat no : "+a);
                     System.out.println("Coach no : "+(int)a/8);
                     break;
+                case 3:
                 case 6:
                     System.out.println("Lower Berth");
                     System.out.println("Seat no : "+a);
