@@ -182,10 +182,11 @@ class MergeTwoArray {
             a[res[i]]++;
         }
         
-        for(int i = 0;i < 10;i++)
+        for(int i1 = 0;i1 < l3;i1++)
         {
-            if(a[i] > 0)
-                System.out.print(i + " ");
+            if(a[res[i1]] > 0)
+                System.out.print(res[i1] + " ");
+            a[res[i1]] = 0;
         }
     }
 }
