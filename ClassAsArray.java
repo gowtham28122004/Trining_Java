@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class HelloWorld 
+class ClassAsArray
 {
     public static void main(String[] args) 
     {
