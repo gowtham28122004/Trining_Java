@@ -16,5 +16,19 @@ class ExceptChar {
                 System.out.print(name.charAt(i));
             }
         }
+        
+        // String sample = s.nextLine();
+        // StringBuilder name = new StringBuilder(sample);
+        // char except = s.next().charAt(0);
+        
+        // for (int i = 0;i < name.length();i++)
+        // {
+        //     if(name.charAt(i) == except)
+        //     {
+        //         name.deleteCharAt(i--);
+        //     }
+        // }
+        
+        // System.out.println(name);
     }
 }
