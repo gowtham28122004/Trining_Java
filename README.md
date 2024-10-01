@@ -32,9 +32,11 @@
   </li>
   <li>
     Back-End Development:
-    <li>Core Java concepts</li>
-    <li>Object-Oriented Programming (OOP)</li>
-    <li>Spring Framework & Spring Boot</li>
-    <li>RESTful Web Services</li>
+    <ul>
+      <li>Core Java concepts</li>
+      <li>Object-Oriented Programming (OOP)</li>
+      <li>Spring Framework & Spring Boot</li>
+      <li>RESTful Web Services</li>
+    </ul>
   </li>
 </ol>
