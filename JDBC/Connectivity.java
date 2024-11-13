@@ -24,7 +24,7 @@ public class Connectivity {
 		}
 		rs = ps.executeQuery();
 		while(rs.next()){
-			System.out.println(".....................Employee"+i+"....................");
+			System.out.println(".....................Employee........................");
 				System.out.println("Employee Id:"+rs.getInt("employee_id"));
 				System.out.println("Name:"+rs.getString("name"));
 				System.out.println("Salary:"+rs.getFloat("salary"));
