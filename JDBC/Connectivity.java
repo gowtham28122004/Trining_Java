@@ -3,6 +3,39 @@ import java.util.*;
 import java.sql.*;
 
 public class Connectivity { 
+
+	static void update(int id,int c,int newi) throws SQLException {
+		String url="jdbc:mysql://localhost:3306/nala";
+		String username="root";
+		String password="root123";
+		String ch = null;
+		
+		if(c==1) {
+			ch="employee_id";
+		}
+		else if(c==2) {
+			ch="name";
+		}
+		else if(c==3) {
+			ch="salary";
+		}
+		
+		else if (c==4) {
+			ch="age";
+		}
+		String q="UPDATE employees SET "+ch+"="+newi+" WHERE"+" employee_id"+"="+id +";";
+		System.out.println(q);
+		Connection con= DriverManager.getConnection(url,username,password);
+		PreparedStatement ps=con.prepareStatement(q);
+		
+		if(ps.executeUpdate()==1) {
+			System.out.println("Successfully Added");
+		}
+
+
+		con.close();
+	}
+	
 	static void add(String name,int id,float salary,int age) throws SQLException {
 		String url = "jdbc:mysql://localhost:3306/jdbc_learn";
 		String username = "root";
@@ -81,6 +114,22 @@ public class Connectivity {
 		int delid = sc.nextInt();
 		del(delid);
 		break;
+	case 3:
+    		System.out.println("Enter the Id");
+    		int i=sc.nextInt();
+    		System.out.println("If change name - 1");
+    		System.out.println("If change id - 2");
+    		System.out.println("If change Salary - 3");
+    		
+    		System.out.println("If change Age - 4");
+    		
+    		int c=sc.nextInt();
+    		if(c==2) {
+    		System.out.println("Enter the new value");
+    		int ne=sc.nextInt();
+    		update(i,c,ne);
+    		break;
+    		}
     	case 5:
     		display();
     		break;
