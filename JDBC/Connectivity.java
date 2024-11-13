@@ -20,6 +20,20 @@ public class Connectivity {
 			con.close();
 		}
 	}
+
+	static void del(int del) throws SQLException {
+		String url = "jdbc:mysql//localhost:3306/jdbc_learn";
+		String username = "root";
+		String password = "gowtham@2004"
+
+		String q = "delete from employees where employee_id = ",+del+" ;";
+		Connection con = DriverManager.getConnection(url,username,password);
+		PreparedStatement ps = com.prepareStatement(q);
+		if(ps.executeUpdate()==1) {
+			System.out.println("Successfully Deleted");
+		}
+		con.close();
+	}
 	
 	static void display() throws SQLException {
 		String url = "jdbc:mysql://localhost:3306/jdbc_learn";
@@ -62,7 +76,12 @@ public class Connectivity {
     	int age=sc.nextInt();
     	add(name,id,salary,age);
     	break;
-    	case 2:
+	case 2:
+		System.out.print("Enter the Employee Id wanna to delete :");
+		int delid = sc.nextInt();
+		del(delid);
+		break;
+    	case 5:
     		display();
     		break;
     	default:
