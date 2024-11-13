@@ -7,7 +7,7 @@ public class Connectivity {
 	static void search(int ch) throws SQLException{
 		String url = "jdbc:mysql//localhost:3306/jdbc_learn";
 		String username = "root";
-		String password = "gowthamslm2004@gmail.com";
+		String password = "gowtham@2004";
 		Connection con = DriverManager.getConnection(url, username, password);
 
 		Scanner sc = new Scanner(System.in);
