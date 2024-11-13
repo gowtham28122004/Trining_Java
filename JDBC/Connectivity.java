@@ -4,10 +4,39 @@ import java.sql.*;
 
 public class Connectivity { 
 
+	static void search(int ch) throws SQLException{
+		String url = "jdbc:mysql//localhost:3306/jdbc_learn";
+		String username = "root";
+		String password = "gowthamslm2004@gmail.com";
+		Connection con = DriverManager.getConnection(url, username, password);
+
+		Scanner sc = new Scanner(System.in);
+		PrepareStatement ps = null;
+		ResultSet rs = null;
+
+		if(ch == 1){
+			System.out.println("Enter the ");
+			String name = sc.next();
+			String q = "select * from employees where name = ?");
+
+			ps = con.prepareStatement(q);
+			ps.setString(1,name);
+		}
+		rs = ps.executeQuery();
+		while(rs.next()){
+			System.out.println(".....................Employee"+i+"....................");
+				System.out.println("Employee Id:"+rs.getInt("employee_id"));
+				System.out.println("Name:"+rs.getString("name"));
+				System.out.println("Salary:"+rs.getFloat("salary"));
+				System.out.println("Age:"+rs.getInt("age"));
+		}
+		con.close();
+	}
+
 	static void update(int id,int c,int newi) throws SQLException {
-		String url="jdbc:mysql://localhost:3306/nala";
+		String url="jdbc:mysql://localhost:3306/jdbc_learn";
 		String username="root";
-		String password="root123";
+		String password="gowtham@2004";
 		String ch = null;
 		
 		if(c==1) {
@@ -130,6 +159,13 @@ public class Connectivity {
     		update(i,c,ne);
     		break;
     		}
+	case 4:
+		System.out.println("Based on name -1");
+		System.out.println("Based on id -2");
+		System.out.println("Based on Salary -3");
+		System.out.println("Based on Age -4);
+		int ch = sc.nextInt();
+		search(ch);
     	case 5:
     		display();
     		break;
